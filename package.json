@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "graceful-fs": "^4.2.11"
-  }
+  },
+  "name": "htb-writeups",
+  "description": "Hi  Bound to succeed saved",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-load-plugins": "^2.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trouble-twiistt/HTB-writeups.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trouble-twiistt/HTB-writeups/issues"
+  },
+  "homepage": "https://github.com/trouble-twiistt/HTB-writeups#readme"
 }
