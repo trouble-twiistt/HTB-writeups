@@ -70,7 +70,7 @@ xfreerdp /u:Administrator /v:<victimip>
 - Difficulty: Very easy 
 - Performed Nmap scan
 ```
-nmap -sV -sC -Pn 10.12923.177
+nmap -sV -sC -Pn 10.129.23.177
 ```
 - HTTP services found running on por 80
 - Conducting more recon using Gobuster to enumerate browser directories 
@@ -82,3 +82,26 @@ gobuster dir -u http://10.129.242.244/ -w /usr/share/wordlist/rockyou.txt -x php
 - Login page detected 
 - 'admin' 'admin' was the credentials
 - Flag found on the admin panel page
+
+### Mongod
+- Difficulty: Very easy 
+- Performed Nmap scam
+```
+nmap -sV -sC -Pn 10.129.233.30
+```
+- Port 22 open for SSH
+- Found another port 27010 with mongodb running 
+- Install the monngodb shell
+- Then use the command 
+```
+mongosh 10.129.233.30
+show dbs 
+use sensitive_information
+show collections
+```
+- To view the content of the file and to dump it follow these commands
+```
+db.flag.find()
+db.flag.find().pretty()
+```
+- Now grab the flag 
