@@ -65,3 +65,20 @@ nmap -sV -sC -Pn <targetip>
 ```
 xfreerdp /u:Administrator /v:<victimip>
 ```
+
+### Preignition
+- Difficulty: Very easy 
+- Performed Nmap scan
+```
+nmap -sV -sC -Pn 10.12923.177
+```
+- HTTP services found running on por 80
+- Conducting more recon using Gobuster to enumerate browser directories 
+```
+gobuster -h
+gobuster dir -u http://10.129.242.244/ -w /usr/share/wordlist/rockyou.txt -x php
+```
+- Admin.php page found 
+- Login page detected 
+- 'admin' 'admin' was the credentials
+- Flag found on the admin panel page

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>starting-point · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="starting-point.html" />
     
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -100,7 +100,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="starting-point.html">
+        <li class="chapter active" data-level="1.2" data-path="starting-point.html">
             
                 <a href="starting-point.html">
             
@@ -143,7 +143,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >starting-point</a>
     </h1>
 </div>
 
@@ -158,8 +158,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>Hi my name is karthik siva. I am a cybersecurity student in my last year. I will be publishing all my write-ups and projects here!</p>
+                                <h1 id="starting-point">Starting Point</h1>
+<p>This is the starting of my journey to become a god-like pentester.Building my knowledge from zer0 by cracking Hack the box machines. Starting point is a section to learn the basics of penetration testing. There are 3 tiers with multiple machines in each tier.</p>
+<pre><code>Bound to succeed
+</code></pre><h2 id="machines---tier-0">Machines - Tier 0</h2>
+<h3 id="meow">Meow</h3>
+<ul>
+<li>Difficulty: Very easy     </li>
+<li>Understand the working of Telnet</li>
+<li>Uses port 23</li>
+<li>Use telnet command to login to the server with blank password</li>
+<li>Find the flag in the directory<h3 id="fawn">Fawn</h3>
+</li>
+<li>Difficulty: Very easy </li>
+<li>Understand the working of FTP(FileTransferProtocol)</li>
+<li>Uses port 21</li>
+<li>Nmap scan to see the services and ports that are running ftp
+<code>nmap -sV -sC -Pn &lt;targetip&gt;</code></li>
+<li>FTP into the server and login as anonymous</li>
+<li>Find the flag in the directory</li>
+</ul>
+<h3 id="dancing">Dancing</h3>
+<ul>
+<li>Difficulty: Very easy </li>
+<li>Understand the working of &apos;Server message block&apos;</li>
+<li>Uses port 445 and 139</li>
+<li>use sambaclient to connect to the smb server</li>
+<li>To list out the directories <pre><code>smbclient -L &lt;targetip&gt;
+</code></pre></li>
+<li><p>To access the shares use the command </p>
+<pre><code>smbclient\\\\&lt;targetip&gt;\\Sharename &lt;username&gt;
+</code></pre></li>
+<li><p>Grab the flag</p>
+<h3 id="redeemer">Redeemer</h3>
+</li>
+<li>Difficulty: Very easy </li>
+<li>Understand the working of Databases</li>
+<li>Usual Nmap scan took around 21min </li>
+<li>Workaround <pre><code>nmap T:1009-9999 -Pn -sV &lt;targetip&gt;
+</code></pre></li>
+<li>Redis service detected running</li>
+<li>Connect to redis using <code>redis-cli</code></li>
+<li>After getting access to the database -&gt; use the following steps</li>
+<li><blockquote>
+<blockquote>
+<p>info  (get info about the database)</p>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>keys* (Displays all the keys)</p>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>Browse to the keys by selecting the database</p>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>get flag (to retrieve the flag)</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h3 id="explosion">Explosion</h3>
+<ul>
+<li>Difficulty: Very easy</li>
+<li>Understand the working of RDP</li>
+<li><p>Nmap scan for recon </p>
+<pre><code>nmap -sV -sC -Pn &lt;targetip&gt;
+</code></pre></li>
+<li><p>RDP service running in 3389</p>
+</li>
+<li>Using xfreerdp &gt; logged in to the vm and grabbed the flag <pre><code>xfreerdp /u:Administrator /v:&lt;victimip&gt;
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -187,10 +264,10 @@
 
             
                 
-                
-                <a href="starting-point.html" class="navigation navigation-next navigation-unique" aria-label="Next page: starting-point">
-                    <i class="fa fa-angle-right"></i>
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -199,7 +276,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"starting-point","level":"1.2","depth":1,"path":"starting-point.md","ref":"starting-point.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2023-09-18T19:39:45.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T19:50:25.210Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"starting-point","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"starting-point.md","mtime":"2023-09-12T17:52:59.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T14:16:56.568Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

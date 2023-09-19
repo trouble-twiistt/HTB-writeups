@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="week1.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -100,20 +100,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="week1.html">
-            
-                <a href="week1.html">
-            
-                    
-                    Week1
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.3" data-path="starting-point.html">
+        <li class="chapter active" data-level="1.2" data-path="starting-point.html">
             
                 <a href="starting-point.html">
             
@@ -250,6 +237,20 @@
 <li>Using xfreerdp &gt; logged in to the vm and grabbed the flag <pre><code>xfreerdp /u:Administrator /v:&lt;victimip&gt;
 </code></pre></li>
 </ul>
+<h3 id="preignition">Preignition</h3>
+<ul>
+<li>Difficulty: Very easy </li>
+<li>Performed Nmap scan<pre><code>nmap -sV -sC -Pn 10.12923.177
+</code></pre></li>
+<li>HTTP services found running on por 80</li>
+<li>Conducting more recon using Gobuster to enumerate browser directories <pre><code>gobuster -h
+gobuster dir -u http://10.129.242.244/ -w /usr/share/wordlist/rockyou.txt -x php
+</code></pre></li>
+<li>Admin.php page found </li>
+<li>Login page detected </li>
+<li>&apos;admin&apos; &apos;admin&apos; was the credentials</li>
+<li>Flag found on the logged in page.</li>
+</ul>
 
                                 
                                 </section>
@@ -277,7 +278,7 @@
 
             
                 
-                <a href="week1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Week1">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -289,7 +290,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"starting-point","level":"1.3","depth":1,"previous":{"title":"Week1","level":"1.2","depth":1,"path":"week1.md","ref":"week1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"starting-point.md","mtime":"2023-09-12T17:52:59.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-12T17:53:10.573Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"starting-point","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"starting-point.md","mtime":"2023-09-18T19:49:58.686Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T19:50:25.210Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
